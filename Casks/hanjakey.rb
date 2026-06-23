@@ -8,7 +8,7 @@ cask "hanjakey" do
   desc "Hangul-to-Hanja and special-symbol converter for the menu bar"
   homepage "https://github.com/SJY051/HanjaKey"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "HanjaKey.app"
 
