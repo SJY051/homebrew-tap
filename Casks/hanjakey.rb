@@ -1,6 +1,6 @@
 cask "hanjakey" do
-  version "0.1.2"
-  sha256 "46564e6813d62c9c61576309f99e5e6b9daa822bd6ea2e402da8bf642d91d842"
+  version "0.1.3"
+  sha256 "325e9d019afeb3b2ee39027c73ab9678c6f1ed153030a1c26a30a408d54aa590"
 
   url "https://github.com/SJY051/HanjaKey/releases/download/v#{version}/HanjaKey-v#{version}.dmg"
   name "HanjaKey"
