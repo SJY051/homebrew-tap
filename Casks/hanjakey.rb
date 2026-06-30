@@ -1,6 +1,6 @@
 cask "hanjakey" do
-  version "0.1.3"
-  sha256 "325e9d019afeb3b2ee39027c73ab9678c6f1ed153030a1c26a30a408d54aa590"
+  version "0.1.4"
+  sha256 "5b9ffe94d6dc1a02d3558d2e8713fdfee453ff2e0740c3afcd3cf330256fb03c"
 
   url "https://github.com/SJY051/HanjaKey/releases/download/v#{version}/HanjaKey-v#{version}.dmg"
   name "HanjaKey"
@@ -17,13 +17,11 @@ cask "hanjakey" do
   ]
 
   caveats <<~EOS
-    HanjaKey is self-signed (not yet Apple-notarized), so macOS Gatekeeper blocks the
-    first launch. Once, after installing:
-
-      * System Settings -> Privacy & Security -> "Open Anyway", or run:
-          xattr -dr com.apple.quarantine "/Applications/HanjaKey.app"
-
-    Then grant Accessibility (System Settings -> Privacy & Security -> Accessibility),
+    HanjaKey is Apple-notarized, so it launches with no Gatekeeper warning. On first
+    launch, grant Accessibility (System Settings -> Privacy & Security -> Accessibility),
     which HanjaKey needs to read and replace text in other apps.
+
+    Upgrading from a self-signed build (v0.1.2 / v0.1.3)? The signing identity changed,
+    so you may need to re-grant Accessibility once.
   EOS
 end
